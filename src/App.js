@@ -1,15 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Navbar from './components/navbar'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import Header from './components/header'
 import Homepage from './components/homepage'
 import Footer from './components/footer'
-import './App.css';
 
 const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
         </Switch>
