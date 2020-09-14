@@ -11,10 +11,10 @@ const Header = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
                     <Link to="/" className="nav-link"><Nav.Link>Discussion Forum</Nav.Link></Link>
-                    <Link to="/" className="nav-link"><Nav.Link>Registration</Nav.Link></Link>
+                    <Link to="/" className="nav-link"><Nav.Link>Registration Guide</Nav.Link></Link>
+                    <Link to="/" className="nav-link"><Nav.Link>Academics</Nav.Link></Link>
                     <Link to="/" className="nav-link"><Nav.Link>Fests</Nav.Link></Link>
                     <Link to="/" className="nav-link"><Nav.Link>Clubs</Nav.Link></Link>
-                    <Link to="/" className="nav-link"><Nav.Link>Academics</Nav.Link></Link>
                     <NavDropdown title="More" id="collasible-nav-dropdown" className="nav-link">
                         <Link to="/" className="nav-link"><NavDropdown.Item>Gallery</NavDropdown.Item></Link>
                         <Link to="/" className="nav-link"><NavDropdown.Item>Placement Stats</NavDropdown.Item></Link>
