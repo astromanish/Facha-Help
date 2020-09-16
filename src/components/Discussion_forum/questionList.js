@@ -1,75 +1,25 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Question from "./question";
 
 const Discussion = () => {
-  return (
-    <>
-      <div className="d-item d-ques">
-        <div className="d-item-ques">
-          <div className="d-item-ques-heading">Ques 1 heading</div>
-          <div className="d-item-ques-subheading">
-            <i className="fa fa-chevron-right" aria-hidden="true"></i>{" "}
-            <span>SubHeading</span>
-          </div>
-        </div>
-        <div className="d-ques-owner">Asked by Manish</div>
-        <div className="d-ques-answers">
-          <Link>
-            <i className="fa fa-angle-double-right" aria-hidden="true"></i>
-            Answers
-          </Link>
-        </div>
-      </div>
-      <div className="d-item d-ques">
-        <div className="d-item-ques">
-          <div className="d-item-ques-heading">Ques 1 heading</div>
-          <div className="d-item-ques-subheading">
-            <i className="fa fa-chevron-right" aria-hidden="true"></i>{" "}
-            <span>SubHeading</span>
-          </div>
-        </div>
-        <div className="d-ques-owner">Asked by Manish</div>
-        <div className="d-ques-answers">
-          <Link>
-            <i className="fa fa-angle-double-right" aria-hidden="true"></i>
-            Answers
-          </Link>
-        </div>
-      </div>
-      <div className="d-item d-ques">
-        <div className="d-item-ques">
-          <div className="d-item-ques-heading">Ques 1 heading</div>
-          <div className="d-item-ques-subheading">
-            <i className="fa fa-chevron-right" aria-hidden="true"></i>{" "}
-            <span>SubHeading</span>
-          </div>
-        </div>
-        <div className="d-ques-owner">Asked by Manish</div>
-        <div className="d-ques-answers">
-          <Link>
-            <i className="fa fa-angle-double-right" aria-hidden="true"></i>
-            Answers
-          </Link>
-        </div>
-      </div>
-      <div className="d-item d-ques">
-        <div className="d-item-ques">
-          <div className="d-item-ques-heading">Ques 1 heading</div>
-          <div className="d-item-ques-subheading">
-            <i className="fa fa-chevron-right" aria-hidden="true"></i>{" "}
-            <span>SubHeading</span>
-          </div>
-        </div>
-        <div className="d-ques-owner">Asked by Manish</div>
-        <div className="d-ques-answers">
-          <Link>
-            <i className="fa fa-angle-double-right" aria-hidden="true"></i>
-            Answers
-          </Link>
-        </div>
-      </div>
-    </>
-  );
+  const [questions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: "/questions",
+    })
+      .then((res) => {
+        setQuestions(res.data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+  console.log(questions);
+  const quesArray = questions.map((data) => {
+    return <Question data={data} />;
+  });
+  return quesArray;
 };
 
 export default Discussion;
