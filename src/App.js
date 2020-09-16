@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/header'
 import Homepage from './components/homepage'
 import Footer from './components/footer'
+import Discussion from './Discussion_forum/Discuss';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
+          <Route exact path="/discuss" component={Discussion} />
         </Switch>
         <Footer />
       </BrowserRouter>
