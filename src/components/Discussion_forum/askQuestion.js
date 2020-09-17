@@ -17,7 +17,6 @@ const AskQuestion = () => {
 
   const submitFun = (e) => {
     e.preventDefault();
-    window.location.reload();
     axios({
       method: "post",
       url:

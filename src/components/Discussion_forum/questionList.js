@@ -15,6 +15,7 @@ const Discussion = () => {
       })
       .catch((err) => console.error(err));
   }, []);
+  console.log(questions);
   const quesArray = questions.map((data) => {
     return <Question key={data._id} data={data} />;
   });
