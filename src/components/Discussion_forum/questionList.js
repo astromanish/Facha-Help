@@ -8,7 +8,7 @@ const Discussion = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: "https://facha-help.herokuapp.com/questions",
+      url: "/questions",
     })
       .then((res) => {
         setQuestions(res.data);
