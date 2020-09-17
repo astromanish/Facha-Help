@@ -1,4 +1,4 @@
-import Axios from "axios";
+import axios from "axios";
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import QuestionModel from "./questionModel";
@@ -17,21 +17,21 @@ const AskQuestion = () => {
 
   const submitFun = (e) => {
     e.preventDefault();
-    Axios({
+    window.location.reload();
+    axios({
       method: "post",
-      url: "/questions",
+      url:
+        "https://cors-anywhere.herokuapp.com/https://facha-help.herokuapp.com/questions",
       data: {
         q_body: question,
         writer_name: name,
       },
       headers: {
         "Content-Type": "application/json",
-        accept: "application/json",
       },
     })
       .then((res) => console.log(res))
       .catch((err) => console.error(err));
-    console.log(question, name);
   };
 
   return (
