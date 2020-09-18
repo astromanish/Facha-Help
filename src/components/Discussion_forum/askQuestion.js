@@ -10,14 +10,7 @@ const AskQuestion = () => {
   const [quePost, setQuePost] = useState(0);
   const quesRef = useRef();
   const nameRef = useRef();
-
-  const quesFun = (e) => {
-    setQuestion(e.target.value);
-  };
-
-  const nameFun = (e) => {
-    setName(e.target.value);
-  };
+  
   useEffect(() => {
     axios({
       method: "get",
@@ -74,9 +67,10 @@ const AskQuestion = () => {
           onChange={(e) => setName(e.target.value)}
         />
       </Form.Group>
-      <Button variant="outline-primary" type="submit">
-        Ask
-      </Button>
+      <div className="d-item-form-button">
+            <Button variant="primary" type="submit" size="sm">Ask</Button>
+      </div>
+      
     </Form>
     </div>
     {
