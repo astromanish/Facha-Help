@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useState, useRef,useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
-import Question from './question';
+import QuestionList from './questionsList';
 
 const AskQuestion = () => {
   const [question, setQuestion] = useState("");
-  const [questionList, setQuestionList] = useState([]);
+  const [questionsList, setQuestionsList] = useState([]);
   const [name, setName] = useState("");
   const [quePost, setQuePost] = useState(0);
   const quesRef = useRef();
@@ -17,7 +17,7 @@ const AskQuestion = () => {
       url: "/questions",
     })
       .then((res) => {
-        setQuestionList(res.data);
+        setQuestionsList(res.data);
       })
       .catch((err) => console.error(err));
   }, [quePost]);
@@ -73,16 +73,8 @@ const AskQuestion = () => {
       
     </Form>
     </div>
-    {
-      questionList.slice(0).reverse().map(data => {
-        return(
-          <><>
-          <div className="d-item d-ques" key={data._id}>
-            <Question data={data} />
-          </div>
-          </></>
-        )
-      })
+    { 
+        questionsList.length > 0 && <QuestionList data={questionsList} />
     }
     </></>
   );
