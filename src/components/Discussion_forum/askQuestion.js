@@ -1,15 +1,29 @@
 import axios from "axios";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
-import QuestionModel from "./questionModel";
+import QuestionList from './questionsList';
 
 const AskQuestion = () => {
   const [question, setQuestion] = useState("");
+  const [questionsList, setQuestionsList] = useState([]);
   const [name, setName] = useState("");
+  const [quePost, setQuePost] = useState(0);
   const quesRef = useRef();
   const nameRef = useRef();
+  
+  useEffect(() => {
+    axios({
+      method: "get",
+      url: "/questions",
+    })
+      .then((res) => {
+        setQuestionsList(res.data);
+      })
+      .catch((err) => console.error(err));
+  }, [quePost]);
 
   const submitFun = (e) => {
+    console.log(e);
     e.preventDefault();
     quesRef.current.value = "";
     nameRef.current.value = "";
@@ -26,12 +40,14 @@ const AskQuestion = () => {
       },
     })
       .then((res) => {
-        console.log(res);
+        setQuePost(quePost+1);
       })
       .catch((err) => console.error(err));
   };
 
   return (
+    <><>
+    <div className="d-item d-item-ask-model">
     <Form onSubmit={submitFun}>
       <Form.Group>
         <Form.Control
@@ -51,10 +67,16 @@ const AskQuestion = () => {
           onChange={(e) => setName(e.target.value)}
         />
       </Form.Group>
-      <Button variant="outline-primary" type="submit">
-        Ask
-      </Button>
+      <div className="d-item-form-button">
+            <Button variant="primary" type="submit" size="sm">Ask</Button>
+      </div>
+      
     </Form>
+    </div>
+    { 
+        questionsList.length > 0 && <QuestionList data={questionsList} />
+    }
+    </></>
   );
 };
 
