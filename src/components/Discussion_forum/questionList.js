@@ -17,7 +17,7 @@ const Discussion = () => {
   }, []);
   console.log(questions);
   const quesArray = questions.map((data) => {
-    return <Question data={data} />;
+    return <Question key={data._id} data={data} />;
   });
   return quesArray;
 };

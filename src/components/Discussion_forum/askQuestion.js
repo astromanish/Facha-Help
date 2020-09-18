@@ -1,5 +1,5 @@
-import Axios from "axios";
-import React, { useState,useEffect } from "react";
+import axios from "axios";
+import React, { useState, useRef,useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import Question from './question';
 
@@ -8,6 +8,8 @@ const AskQuestion = () => {
   const [questionList, setQuestionList] = useState([]);
   const [name, setName] = useState("");
   const [quePost, setQuePost] = useState(0);
+  const quesRef = useRef();
+  const nameRef = useRef();
 
   const quesFun = (e) => {
     setQuestion(e.target.value);
@@ -17,7 +19,7 @@ const AskQuestion = () => {
     setName(e.target.value);
   };
   useEffect(() => {
-    Axios({
+    axios({
       method: "get",
       url: "/questions",
     })
@@ -30,7 +32,10 @@ const AskQuestion = () => {
   const submitFun = (e) => {
     console.log(e);
     e.preventDefault();
-    Axios({
+    quesRef.current.value = "";
+    nameRef.current.value = "";
+
+    axios({
       method: "post",
       url: "/questions",
       data: {
@@ -39,14 +44,12 @@ const AskQuestion = () => {
       },
       headers: {
         "Content-Type": "application/json",
-        accept: "application/json",
       },
     })
       .then((res) => {
         setQuePost(quePost+1);
       })
       .catch((err) => console.error(err));
-    console.log(question, name);
   };
 
   return (
@@ -55,16 +58,20 @@ const AskQuestion = () => {
     <Form onSubmit={submitFun}>
       <Form.Group>
         <Form.Control
+          ref={quesRef}
+          value={question}
           type="text"
           placeholder="Enter question you wanna ask.."
-          onChange={quesFun}
+          onChange={(e) => setQuestion(e.target.value)}
         />
       </Form.Group>
       <Form.Group>
         <Form.Control
+          ref={nameRef}
+          value={name}
           type="text"
           placeholder="Enter your first name.."
-          onChange={nameFun}
+          onChange={(e) => setName(e.target.value)}
         />
       </Form.Group>
       <Button variant="outline-primary" type="submit">
