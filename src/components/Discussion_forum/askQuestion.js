@@ -27,7 +27,6 @@ const AskQuestion = () => {
     e.preventDefault();
     quesRef.current.value = "";
     nameRef.current.value = "";
-
     axios({
       method: "post",
       url: "/questions",
@@ -41,6 +40,8 @@ const AskQuestion = () => {
     })
       .then((res) => {
         setQuePost(quePost+1);
+        setName('');
+        setQuestion('');
       })
       .catch((err) => console.error(err));
   };
