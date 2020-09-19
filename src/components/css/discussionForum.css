@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: rgb(247, 247, 247);
+  background-color: rgb(252, 252, 252);
 }
 
 .d-container {
@@ -31,10 +31,10 @@ body {
 }
 /*Ask Question top*/
 .d-item-ask-model {
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.032);
+  box-shadow: rgba(221, 230, 237, 0.4) 0px 16px 32px 0px;
   background-color: white;
   border: 1px solid #fafafa;
-  border-radius: 2px;
+  border-radius: 10px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -53,13 +53,13 @@ body {
 /**/
 /*Question*/
 .d-ques {
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.032);
+  box-shadow: rgba(221, 230, 237, 0.4) 0px 16px 32px 0px;
   background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px 20px 20px 20px;
   border: 1px solid #fafafa;
-  border-radius: 5px;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -77,3 +77,8 @@ body {
   text-align: end;
 }
 /**/
+
+/*Answers portion*/
+.d-answers{
+  background: white;
+}
