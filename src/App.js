@@ -6,7 +6,7 @@ import Header from "./components/header";
 import Homepage from "./components/homepage";
 import Footer from "./components/footer";
 import DiscussionForum from "./components/discussionForum";
-import AddAnswer from './components/Discussion_forum/AddAnswer';
+import AddAnswer from "./components/Discussion_forum/AddAnswer";
 
 const App = () => {
   return (
@@ -16,7 +16,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/discuss" component={DiscussionForum} />
-            <Route exact path="/discuss/:question_id/answers" component={AddAnswer} />
+          <Route exact path="/discuss/answers/:ques_id" component={AddAnswer} />
         </Switch>
         <Footer />
       </BrowserRouter>
