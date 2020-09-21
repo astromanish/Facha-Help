@@ -40,7 +40,7 @@ const AddAnswer = (props) => {
 
   return (
     <>
-      <div className="d-container">
+      <>
         <div className="d-item d-item-ques-head">
           <div className="d-item-ques-head-username">
             Question by <span>{question.writer_name}</span>
@@ -75,7 +75,7 @@ const AddAnswer = (props) => {
             </div>
           </Form>
         </div>
-      </div>
+      </>
     </>
   );
 };
