@@ -1,12 +1,17 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+
+import "./app.css";
+
 import Header from "./components/header";
 import Homepage from "./components/homepage";
-import Footer from "./components/footer";
 import DiscussionForum from "./components/discussionForum";
-import AddAnswer from "./components/Discussion_forum/AddAnswer";
+import AnswerAll from "./components/Discussion_Forum/answerAll";
+import Footer from "./components/footer";
+
+import { QuestionProvider } from "./components/Discussion_Forum/QuestionContext";
+import { AnswerProvider } from "./components/Discussion_Forum/AnswerContext";
 
 const App = () => {
   return (
@@ -15,8 +20,16 @@ const App = () => {
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/discuss" component={DiscussionForum} />
-          <Route exact path="/discuss/answers/:ques_id" component={AddAnswer} />
+          <QuestionProvider>
+            <AnswerProvider>
+              <Route exact path="/discussion" component={DiscussionForum} />
+              <Route
+                exact
+                path="/discussion/:ques_id/answers"
+                component={AnswerAll}
+              />
+            </AnswerProvider>
+          </QuestionProvider>
         </Switch>
         <Footer />
       </BrowserRouter>
