@@ -161,3 +161,15 @@ body {
   height: 300px;
   margin-top: 20px;
 }
+
+.no-answer {
+  box-shadow: rgba(221, 230, 237, 0.4) 0px 16px 32px 0px;
+  background-color: white;
+  border: 1px solid #fafafa;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-top: 20px;
+}

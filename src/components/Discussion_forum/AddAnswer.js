@@ -55,7 +55,7 @@ const AddAnswer = (props) => {
                 ref={ansRef}
                 value={answer}
                 type="text"
-                placeholder="Submit your answer to the question..."
+                placeholder="Enter your answer to this question..."
                 onChange={(e) => setAnswer(e.target.value)}
               />
             </Form.Group>
@@ -64,7 +64,7 @@ const AddAnswer = (props) => {
                 ref={writerRef}
                 value={writer}
                 type="text"
-                placeholder="Enter your name.."
+                placeholder="Enter your first name.."
                 onChange={(e) => setWriter(e.target.value)}
               />
             </Form.Group>
