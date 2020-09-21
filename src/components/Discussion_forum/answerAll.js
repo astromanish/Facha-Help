@@ -1,6 +1,6 @@
 import React from "react";
 import AddAnswer from "./addAnswer";
-import AnswerList from "./answersList";
+import AnswerList from './answersList';
 
 const AnswerAll = (props) => {
   return (

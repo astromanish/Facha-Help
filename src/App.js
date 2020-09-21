@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import "./app.css";
+import "./App.css";
 
 import Header from "./components/header";
 import Homepage from "./components/homepage";
@@ -12,6 +12,7 @@ import Footer from "./components/footer";
 
 import { QuestionProvider } from "./components/Discussion_Forum/QuestionContext";
 import { AnswerProvider } from "./components/Discussion_Forum/AnswerContext";
+import AboutUs from './components/AboutUs';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
+          <Route exact path="/aboutus" component={AboutUs} />
           <QuestionProvider>
             <AnswerProvider>
               <Route exact path="/discussion" component={DiscussionForum} />
