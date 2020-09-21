@@ -12,7 +12,7 @@ import Footer from "./components/footer";
 
 import { QuestionProvider } from "./components/Discussion_Forum/QuestionContext";
 import { AnswerProvider } from "./components/Discussion_Forum/AnswerContext";
-import AboutUs from './components/AboutUs';
+import AboutUs from "./components/AboutUs";
 
 const App = () => {
   return (
