@@ -5,8 +5,10 @@ import AnswerList from './answersList';
 const AnswerAll = (props) => {
   return (
     <>
-      <AddAnswer question={props.location.state} />
-      <AnswerList question={props.location.state} />
+    <div className="d-container">
+        <AddAnswer question={props.location.state} />
+        <AnswerList question={props.location.state} />
+    </div>
     </>
   );
 };

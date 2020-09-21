@@ -25,7 +25,7 @@ const AnswerList = (props) => {
   }, [ansNo]);
 
   return (
-    <div className="d-answers-all d-item">
+    <div className="d-item d-answers-all">
       {answersList.map((ans) => {
         return <Answer ans={ans} question={question}></Answer>;
       })}
