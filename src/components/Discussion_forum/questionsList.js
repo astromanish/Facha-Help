@@ -19,20 +19,26 @@ const QuestionList = () => {
   }, [quesNo]);
   return (
     <>
-      {questionsList
-        .slice(0)
-        .reverse()
-        .map((ques) => {
-          return (
-            <>
+      {questionsList.length ? (
+        questionsList
+          .slice(0)
+          .reverse()
+          .map((ques) => {
+            return (
               <>
-                <div className="d-item d-ques" key={ques._id}>
-                  <Question ques={ques} />
-                </div>
+                <>
+                  <div className="d-item d-ques" key={ques._id}>
+                    <Question ques={ques} />
+                  </div>
+                </>
               </>
-            </>
-          );
-        })}
+            );
+          })
+      ) : (
+        <div className="d-item no-question">
+          <p>Be first one to ask question here</p>
+        </div>
+      )}
     </>
   );
 };
