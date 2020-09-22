@@ -25,11 +25,24 @@ const AnswerList = (props) => {
   }, [ansNo]);
 
   return (
-    <div className="d-item d-answers-all">
-      {answersList.map((ans) => {
-        return <Answer ans={ans} question={question}></Answer>;
-      })}
-    </div>
+    <>
+      {answersList.length ? (
+        answersList
+          .slice(0)
+          .reverse()
+          .map((ans) => {
+            return (
+              <div className="d-item d-answers-all">
+                <Answer ans={ans} question={question}></Answer>{" "}
+              </div>
+            );
+          })
+      ) : (
+        <div className="d-item no-answer">
+          <p>Be first one to add answer to this question</p>
+        </div>
+      )}
+    </>
   );
 };
 

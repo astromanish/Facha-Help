@@ -1,14 +1,14 @@
 import React from "react";
-import AddAnswer from "./addAnswer";
-import AnswerList from './answersList';
+import AddAnswer from "./AddAnswer";
+import AnswerList from "./AnswersList";
 
 const AnswerAll = (props) => {
   return (
     <>
-    <div className="d-container">
+      <div className="d-container">
         <AddAnswer question={props.location.state} />
         <AnswerList question={props.location.state} />
-    </div>
+      </div>
     </>
   );
 };
