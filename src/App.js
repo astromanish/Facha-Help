@@ -13,8 +13,16 @@ import Footer from "./components/footer";
 
 import { QuestionProvider } from "./components/Discussion_Forum/QuestionContext";
 import { AnswerProvider } from "./components/Discussion_Forum/AnswerContext";
-import AboutUs from "./components/AboutUs";
+
+import AboutUs from './components/AboutUs';
+import Fests from './components/Fests/Main';
+import KashiYatra from './components/Fests/KashiYatra';
+import Technex from "./components/Fests/Technex";
+import Fmc from "./components/Fests/FmcWeekend";
+import Spardha from "./components/Fests/Spardha";
+import DptFests from "./components/Fests/DepartmentalFests";
 import Clubs from "./components/clubs";
+
 
 const App = () => {
   return (
@@ -24,6 +32,12 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/aboutus" component={AboutUs} />
+          <Route exact path="/fests" component={Fests} />
+          <Route exact path="/fests/kashiyatra" component={KashiYatra} />
+          <Route exact path="/fests/technex" component={Technex} />
+          <Route exact path="/fests/fmc" component={Fmc} />
+          <Route exact path="/fests/spardha" component={Spardha} />
+          <Route exact path="/fests/dptfest" component={DptFests} />
           <Route exact path="/clubs" component={Clubs} />
           <Route exact path="/webpresence" component={WebPresence} />
           <QuestionProvider>
