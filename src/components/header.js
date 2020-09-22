@@ -24,19 +24,31 @@ const Header = () => {
             id="collasible-nav-dropdown"
             className="nav-link"
           >
-            <Link to="/" className="nav-link">
-              <NavDropdown.Item>Gallery</NavDropdown.Item>
-            </Link>
-            <Link to="/" className="nav-link">
-              <NavDropdown.Item>Placement Stats</NavDropdown.Item>
-            </Link>
-            <Link to="/" className="nav-link">
-              <NavDropdown.Item>IIT BHU on the Web</NavDropdown.Item>
-            </Link>
+            <NavDropdown.Item>
+              <Link to="/" className="nav-link">
+                Gallery
+              </Link>
+            </NavDropdown.Item>
+
+            <NavDropdown.Item>
+              <Link to="/" className="nav-link">
+                Placement Stats
+              </Link>
+            </NavDropdown.Item>
+
+            <NavDropdown.Item>
+              <Link to="/webpresence" className="nav-link">
+                IIT BHU on the Web
+              </Link>
+            </NavDropdown.Item>
+
             <NavDropdown.Divider />
-            <Link to="/" className="nav-link">
-              <NavDropdown.Item>Miscellanous Guide</NavDropdown.Item>
-            </Link>
+
+            <NavDropdown.Item>
+              <Link to="/" className="nav-link">
+                Miscellanous Guide
+              </Link>
+            </NavDropdown.Item>
           </NavDropdown>
         </Nav>
 

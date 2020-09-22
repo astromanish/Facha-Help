@@ -1,0 +1,14 @@
+.club-container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.council-name {
+  font-weight: 700;
+}
+
+.council-club {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
