@@ -41,6 +41,7 @@ const Question = (props) => {
       })
       .catch((err) => console.error(err));
   };
+  console.log(props.ques, "hey");
   return (
     <>
       <div className="d-item-ques">
