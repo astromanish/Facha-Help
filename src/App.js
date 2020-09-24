@@ -31,7 +31,7 @@ const App = () => {
         <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
-          <Route exact path="/aboutus" component={AboutUs} />
+          <Route exact path="/about-us" component={AboutUs} />
           <Route exact path="/fests" component={Fests} />
           <Route exact path="/fests/kashiyatra" component={KashiYatra} />
           <Route exact path="/fests/technex" component={Technex} />
@@ -39,14 +39,18 @@ const App = () => {
           <Route exact path="/fests/spardha" component={Spardha} />
           <Route exact path="/fests/dptfest" component={DptFests} />
           <Route exact path="/clubs" component={Clubs} />
-          <Route exact path="/webpresence" component={WebPresence} />
+          <Route exact path="/web-presence" component={WebPresence} />
           <Route exact path="/academics" component={Academics} />
           <QuestionProvider>
             <AnswerProvider>
-              <Route exact path="/discussion" component={DiscussionForum} />
               <Route
                 exact
-                path="/discussion/:ques_id/answers"
+                path="/discussion-forum"
+                component={DiscussionForum}
+              />
+              <Route
+                exact
+                path="/discussion-forum/:ques_id/answers"
                 component={AnswerAll}
               />
             </AnswerProvider>

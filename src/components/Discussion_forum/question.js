@@ -81,7 +81,7 @@ const Question = (props) => {
             </Dropdown>
             <Link
               to={{
-                pathname: `/discussion/${props.ques._id}/answers`,
+                pathname: `/discussion-forum/${props.ques._id}/answers`,
                 state: props.ques,
               }}
             >

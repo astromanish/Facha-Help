@@ -12,8 +12,8 @@ const Header = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav>
-          <Nav.Link href={`/discussion`}>Discussion Forum</Nav.Link>
-          <Nav.Link href={`/registrationguide`}>Registration Guide</Nav.Link>
+          <Nav.Link href={`/discussion-forum`}>Discussion Forum</Nav.Link>
+          <Nav.Link href={`/registration-guide`}>Registration Guide</Nav.Link>
           <Nav.Link href={`/academics`}>Academics</Nav.Link>
           <Nav.Link href={`/fests`}>Fests</Nav.Link>
           <Nav.Link href={`/clubs`}>Clubs</Nav.Link>
@@ -24,37 +24,45 @@ const Header = () => {
             id="collasible-nav-dropdown"
             className="nav-link"
           >
-            <NavDropdown.Item>
-              <Link to="/" className="nav-link">
-                Gallery
-              </Link>
+            <NavDropdown.Item as={Link} to="/gallery">
+              Gallery
             </NavDropdown.Item>
 
-            <NavDropdown.Item>
-              <Link to="/" className="nav-link">
-                Placement Stats
-              </Link>
+            <NavDropdown.Item as={Link} to="/placement-stats">
+              Placement Stats
             </NavDropdown.Item>
 
-            <NavDropdown.Item>
-              <Link to="/webpresence" className="nav-link">
-                IIT BHU on the Web
-              </Link>
+            <NavDropdown.Item as={Link} to="/web-presence">
+              IIT BHU on the Web
             </NavDropdown.Item>
 
             <NavDropdown.Divider />
 
-            <NavDropdown.Item>
-              <Link to="/" className="nav-link">
-                Miscellanous Guide
-              </Link>
+            <NavDropdown.Item as={Link} to="/miscellanous-guide">
+              Miscellanous Guide
             </NavDropdown.Item>
           </NavDropdown>
         </Nav>
 
         <Nav>
-          <Nav.Link href={`/explorevns`}>Explore Varanasi</Nav.Link>
-          <Nav.Link href={`/aboutus`}>About Us</Nav.Link>
+          <Nav.Link href={`/explore-vns`}>Explore Varanasi</Nav.Link>
+        </Nav>
+        <Nav>
+          <NavDropdown
+            title="Get in Touch"
+            id="collasible-nav-dropdown"
+            className="nav-link"
+          >
+            <NavDropdown.Item as={Link} to="/about-us">
+              About Us
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/feedback">
+              Feedback
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/tnc">
+              Terms and Conditions
+            </NavDropdown.Item>
+          </NavDropdown>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
