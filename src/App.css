@@ -16,11 +16,17 @@ body {
   width: 90%;
   margin: 20px auto;
 }
+.heading-0 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Poppins", "Sans-serif";
+  margin: 1em 0em;
+}
 .heading-1 {
   text-align: center;
   font-size: 2rem;
   font-family: "Poppins", "Sans-serif";
-  margin: 1em;
+  margin: 0.8em 0;
 }
 .highlighted-text {
   font-weight: 700;
