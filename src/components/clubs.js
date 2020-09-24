@@ -3,7 +3,7 @@ import "./css/clubs.css";
 
 const Clubs = () => {
   return (
-    <div className="club-container">
+    <div className="body-container">
       <p>
         The Students’ Gymkhana manages all student activities at the campus
         thorough its executive and non-executive wings, the Gymkhana councils
@@ -23,7 +23,7 @@ const Clubs = () => {
       </p>
       <div className="council-club">
         <div className="council">
-          <h4 className="council-heading">Cultural</h4>
+          <h4 className="heading-1">Cultural</h4>
           <p>
             The Cultural Council, one of the established bodies of Gymkhana, is
             the beating heart and melodies soul of the college. This Council
@@ -59,7 +59,7 @@ const Clubs = () => {
       </div>
       <div className="council-club">
         <div className="council">
-          <h4 className="council-heading">Science and Technology</h4>
+          <h4 className="heading-1">Science and Technology</h4>
           <p>
             The Science and Technology Council of our college is an
             institute-wide community of students who share a common passion fro
@@ -82,7 +82,7 @@ const Clubs = () => {
       </div>
       <div className="council-club">
         <div>
-          <h4 className="council-heading">Film and Media</h4>
+          <h4 className="heading-1">Film and Media</h4>
           <p>
             The Film and Media Council of the college is a student body devoted
             to honing the budding digital artists and journalists in the student
@@ -117,7 +117,7 @@ const Clubs = () => {
       </div>
       <div className="council-club">
         <div className="council">
-          <h4 className="council-heading">Games and Sports</h4>
+          <h4 className="heading-1">Games and Sports</h4>
           <p>
             Games and Sports Council, teh biggest council of the institute,
             offers an amazing enviroment to appreciate fitness through various
@@ -164,7 +164,7 @@ const Clubs = () => {
       </div>
       <div className="council-club">
         <div className="council">
-          <h4 className="council-heading">Social and Services</h4>
+          <h4 className="heading-1">Social and Services</h4>
           <p>
             The Social and Services Council embraces all the clubs which are
             dedicated to bringing about positive changes in our society. The

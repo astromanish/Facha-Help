@@ -6,3 +6,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Nunito", "Sans-serif";
+}
+
+.body-container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 20px auto;
+}
+.heading-1 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Poppins", "Sans-serif";
+  margin: 1em;
+}
+.highlighted-text {
+  font-weight: 700;
+}
