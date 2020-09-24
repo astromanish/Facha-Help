@@ -40,42 +40,40 @@ const AddAnswer = (props) => {
 
   return (
     <>
-      <>
-        <div className="d-item d-item-ques-head">
-          <div className="d-item-ques-head-username">
-            Question by <span>{question.writer_name}</span>
+      <div className="d-item d-item-ques-head">
+        <div className="d-item-ques-head-username">
+          Question by <span>{question.writer_name}</span>
+        </div>
+        <div className="d-item-ques-head-time">5 hours ago</div>
+        <div className="d-item-ques-head-ques">{question.q_body}</div>
+      </div>
+      <div className="d-item d-item-ask-model">
+        <Form onSubmit={submitFun}>
+          <Form.Group>
+            <Form.Control
+              ref={ansRef}
+              value={answer}
+              type="text"
+              placeholder="Enter your answer to this question..."
+              onChange={(e) => setAnswer(e.target.value)}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Control
+              ref={writerRef}
+              value={writer}
+              type="text"
+              placeholder="Enter your first name.."
+              onChange={(e) => setWriter(e.target.value)}
+            />
+          </Form.Group>
+          <div className="d-item-form-button">
+            <Button variant="primary" type="submit" size="sm">
+              Submit
+            </Button>
           </div>
-          <div className="d-item-ques-head-time">5 hours ago</div>
-          <div className="d-item-ques-head-ques">{question.q_body}</div>
-        </div>
-        <div className="d-item d-item-ask-model">
-          <Form onSubmit={submitFun}>
-            <Form.Group>
-              <Form.Control
-                ref={ansRef}
-                value={answer}
-                type="text"
-                placeholder="Enter your answer to this question..."
-                onChange={(e) => setAnswer(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group>
-              <Form.Control
-                ref={writerRef}
-                value={writer}
-                type="text"
-                placeholder="Enter your first name.."
-                onChange={(e) => setWriter(e.target.value)}
-              />
-            </Form.Group>
-            <div className="d-item-form-button">
-              <Button variant="primary" type="submit" size="sm">
-                Submit
-              </Button>
-            </div>
-          </Form>
-        </div>
-      </>
+        </Form>
+      </div>
     </>
   );
 };

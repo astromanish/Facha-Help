@@ -25,16 +25,6 @@
     padding: 30px;
   }
 }
-.fest-title {
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  font-size: 120%;
-  font-weight: 900;
-  width: 200px;
-  margin: 0 auto 0 auto;
-  padding: 15px;
-  border-bottom: 1px solid #dadada;
-}
 .fest-item-top {
   margin: 0 auto;
   text-align: center;

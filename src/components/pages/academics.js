@@ -5,7 +5,7 @@ import "./../css/academics.css";
 
 const Academics = () => {
   return (
-    <div className="body-container">
+    <>
       <h4 className="heading-1">Semester System</h4>
       <p>
         The acedemic session of the Institute is divided into three parts: two
@@ -188,7 +188,7 @@ const Academics = () => {
         Tribal Affairs. IDD students are provided a stipend in 9th and 10th
         semesters on fulfilling certain criteria.
       </p>
-    </div>
+    </>
   );
 };
 

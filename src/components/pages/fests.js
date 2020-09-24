@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../css/Fests.css";
+import "../css/fests.css";
 
 const Fests = () => {
   return (
     <>
-      <div className="fests-links fest-container">
+      <div className="fests-links">
         <ul>
           <li>
             <Link to="/fests/kashiyatra">Kashiyatra</Link>

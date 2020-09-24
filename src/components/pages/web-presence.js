@@ -3,8 +3,8 @@ import "./../css/web-presence.css";
 
 const WebPresence = () => {
   return (
-    <div className="web-container">
-      <h3 className="web-item">Websites</h3>
+    <>
+      <h4 className="heading-1">Websites</h4>
       <ul className="web-list">
         <li className="web-item">
           <a href="#" className="web-link"></a>
@@ -22,7 +22,7 @@ const WebPresence = () => {
           <a href="#" className="web-link"></a>
         </li>
       </ul>
-      <h3 className="web-item">Instagram Page</h3>
+      <h4 className="heading-1">Instagram Page</h4>
       <ul className="web-list">
         <li className="web-item">
           <a href="#" className="web-link"></a>
@@ -40,7 +40,7 @@ const WebPresence = () => {
           <a href="#" className="web-link"></a>
         </li>
       </ul>
-      <h3 className="web-item">Facebook Page</h3>
+      <h4 className="heading-1">Facebook Page</h4>
       <ul className="web-list">
         <li className="web-item">
           <a href="#" className="web-link"></a>
@@ -58,7 +58,7 @@ const WebPresence = () => {
           <a href="#" className="web-link"></a>
         </li>
       </ul>
-      <h3 className="web-item">Youtube Channel</h3>
+      <h4 className="heading-1">Youtube Channel</h4>
       <ul className="web-list">
         <li className="web-item">
           <a href="#" className="web-link"></a>
@@ -76,7 +76,7 @@ const WebPresence = () => {
           <a href="#" className="web-link"></a>
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 
