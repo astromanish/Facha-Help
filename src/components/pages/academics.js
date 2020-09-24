@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 
-import "./css/academics.css";
+import "./../css/academics.css";
 
 const Academics = () => {
   return (

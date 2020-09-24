@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/webPresence.css";
+import "./../css/web-presence.css";
 
 const WebPresence = () => {
   return (

@@ -1,7 +1,9 @@
 import React from "react";
-import "./css/discussionForum.css";
-import AskQuestion from "./Discussion_Forum/askQuestion";
-import QuestionList from "./Discussion_Forum/questionsList";
+
+import "./../css/discussion-forum.css";
+
+import AskQuestion from "../DiscussionForum/ask-question";
+import QuestionList from "../DiscussionForum/questions-list";
 
 const DiscussionForum = () => {
   return (

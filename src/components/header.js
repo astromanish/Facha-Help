@@ -16,7 +16,7 @@ const Header = () => {
           <Nav.Link href={`/registration-guide`}>Registration Guide</Nav.Link>
           <Nav.Link href={`/academics`}>Academics</Nav.Link>
           <Nav.Link href={`/fests`}>Fests</Nav.Link>
-          <Nav.Link href={`/clubs`}>Clubs</Nav.Link>
+          <Nav.Link href={`/gymkhana`}>Gymkhana</Nav.Link>
         </Nav>
         <Nav className="mr-auto">
           <NavDropdown

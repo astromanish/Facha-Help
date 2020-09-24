@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const KashiYatra = () => {
-    return(
-        <>
-        HelloWorld
-        </>
-    )
-}
+const Kashiyatra = () => {
+  return <>HelloWorld</>;
+};
 
-export default KashiYatra
+export default Kashiyatra;

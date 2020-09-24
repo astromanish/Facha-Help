@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/clubs.css";
+import "./../css/gymkhana.css";
 
 const Clubs = () => {
   return (
