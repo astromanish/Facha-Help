@@ -4,8 +4,13 @@
   margin: 20px auto;
 }
 
-.council-name {
+.highlighted-text {
   font-weight: 700;
+}
+
+.council-heading {
+  text-align: center;
+  font-size: 2rem;
 }
 
 .council-club {
