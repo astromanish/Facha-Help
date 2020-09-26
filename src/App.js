@@ -17,15 +17,17 @@ import { AnswerProvider } from "./components/DiscussionForum/AnswerContext";
 import AboutUs from "./components/pages/about-us";
 
 import Fests from "./components/pages/fests";
-import KashiYatra from "./components/Fests/kashiyatra";
-import Technex from "./components/Fests/technex";
+import KashiYatra from "./components/Fests/KashiYatra";
+import Technex from "./components/Fests/Technex";
 import FMCWeekend from "./components/Fests/fmc-weekend";
-import Spardha from "./components/Fests/spardha";
+import Spardha from "./components/Fests/Spardha";
 import DeptFests from "./components/Fests/dept-fests";
 
 import Gymkhana from "./components/pages/gymkhana";
 import Academics from "./components/pages/academics";
 import WebPresence from "./components/pages/web-presence";
+
+import Feedback from './components/pages/feedback';
 
 const App = () => {
   return (
@@ -45,6 +47,7 @@ const App = () => {
             <Route exact path="/gymkhana" component={Gymkhana} />
             <Route exact path="/web-presence" component={WebPresence} />
             <Route exact path="/academics" component={Academics} />
+            <Route excat path='/feedback' component={Feedback} />
             <QuestionProvider>
               <AnswerProvider>
                 <Route
