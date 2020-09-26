@@ -17,10 +17,10 @@ import { AnswerProvider } from "./components/DiscussionForum/AnswerContext";
 import AboutUs from "./components/pages/about-us";
 
 import Fests from "./components/pages/fests";
-import KashiYatra from "./components/Fests/KashiYatra";
-import Technex from "./components/Fests/Technex";
+import KashiYatra from "./components/Fests/kashiYatra";
+import Technex from "./components/Fests/technex";
 import FMCWeekend from "./components/Fests/fmc-weekend";
-import Spardha from "./components/Fests/Spardha";
+import Spardha from "./components/Fests/spardha";
 import DeptFests from "./components/Fests/dept-fests";
 
 import Gymkhana from "./components/pages/gymkhana";
