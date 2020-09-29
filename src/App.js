@@ -27,7 +27,8 @@ import Gymkhana from "./components/pages/gymkhana";
 import Academics from "./components/pages/academics";
 import WebPresence from "./components/pages/web-presence";
 
-import Feedback from './components/pages/feedback';
+import Feedback from "./components/pages/feedback";
+import RegistrationGuide from "./components/pages/registration-guide";
 
 const App = () => {
   return (
@@ -47,7 +48,12 @@ const App = () => {
             <Route exact path="/gymkhana" component={Gymkhana} />
             <Route exact path="/web-presence" component={WebPresence} />
             <Route exact path="/academics" component={Academics} />
-            <Route excat path='/feedback' component={Feedback} />
+            <Route excat path="/feedback" component={Feedback} />
+            <Route
+              exact
+              path="/registration-guide"
+              component={RegistrationGuide}
+            />
             <QuestionProvider>
               <AnswerProvider>
                 <Route
