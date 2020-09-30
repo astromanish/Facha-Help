@@ -202,12 +202,16 @@ body {
 .d-answers-each {
   row-gap: 10px;
   display: grid;
-  grid-template-columns: 0.3fr 1fr 1fr;
+  grid-template-columns: 0.2fr 1fr 1fr;
   justify-content: center;
   align-items: center;
 }
 .d-ans-stats{
   grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 5px;
 }
 .d-answer-body {
   grid-column: 2/3;
