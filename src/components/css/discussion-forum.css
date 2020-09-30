@@ -57,18 +57,38 @@ body {
   background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 5px;
   border: 1px solid #fafafa;
   border-radius: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.2fr 1fr 1fr;
   align-items: center;
   row-gap: 10px;
 }
 .d-item-ques {
   word-wrap: break-word;
-  grid-column: 1/4;
+  grid-column: 2/4;
   padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.d-ques-stats{
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 5px;
+}
+.d-ans-link a{
+  color: #2e1525;
+}
+.d-ans-link a:hover{
+  color: #4b40dd !important;
+  text-decoration: none !important;
+}
+.fa-caret-up{
+  color: rgb(81, 255, 81) !important;
 }
 .d-ques-owner {
   font-size: 70%;
@@ -76,6 +96,68 @@ body {
 }
 .d-ques-answers {
   text-align: end;
+}
+.d-ques-vote{
+  grid-column: 2/4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.d-ques-vote-icons{
+  display: flex;
+}
+.d-ques-vote button{
+  outline: none;
+  border: none;
+  background-color: white; 
+  color: white;
+  margin: 0 2px 0 0;
+}
+.d-ques-vote button:focus {
+  background-color: white;
+  color: white;
+}
+.d-ques-vote-up button i{
+  color: rgb(209, 209, 209);
+}
+.d-ques-vote-up button i:hover {
+  background-color: white;
+  color: rgba(95, 145, 252, 0.9);
+}
+.d-ques-vote-down button i {
+  color: rgb(209,209,209);
+
+}
+
+.d-ques-vote-down button i:hover {
+  background-color: white;
+  color: rgba(252, 95, 95, 0.9);
+}
+/*Dropdown Style*/
+.d-ques-answers .dropdown-toggle::after{
+  content: none;
+}
+.d-ques-answers .dropdown button{
+  padding: 0px;
+  background-color: white;
+  outline: none;
+  border: none;
+}
+.d-ques-answers .dropdown button:hover{
+  background-color: white;
+}
+.d-ques-answers .dropdown-toggle{
+  background-color: white;
+  border: none;
+}
+.d-ques-answers .dropdown-toggle:focus{
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 1) !important;
+  border-color: white !important;
+  background-color: white !important;
+}
+.d-ques-answers .btn-light:focus{
+  border-color: white;
+  background-color: rgb(248, 248, 248);
 }
 /**/
 
@@ -118,21 +200,26 @@ body {
   background: white;
 }
 .d-answers-each {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  row-gap: 10px;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.d-ans-stats{
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 5px;
 }
 .d-answer-body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 10px;
-  margin-left: 15px;
+  grid-column: 2/3;
   padding-left: 10px;
-  border-left: 2px solid rgb(196, 196, 196);
 }
 .d-answer-username {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  grid-column: 3/4;
+  justify-content: end;
 }
 .d-answer-username span:nth-of-type(2) {
   font-size: 90%;
@@ -142,12 +229,6 @@ body {
   word-wrap: break-word;
   padding-top: 5px;
   grid-column: 1/4;
-}
-.d-answer-dropdown .btn {
-  padding: 0.25rem 0.35rem;
-  font-size: 0.65rem;
-  background-color: white;
-  border: none;
 }
 
 .no-question {

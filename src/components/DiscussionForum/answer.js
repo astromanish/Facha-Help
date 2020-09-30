@@ -51,31 +51,10 @@ const Answer = (props) => {
   return (
     <>
       <div className="d-answers-each" key={props.ans._id}>
-        <div className="d-answer-username">
-        <div>
-            <span>
-              <i className="fa fa-paw" aria-hidden="true"></i>
-            </span>
-            <span> By {props.ans.writer_name}</span>
+        <div className="d-ans-stats">
+          <div><i className="fa fa-caret-up" aria-hidden="true"></i></div>
+          <p>35</p>
         </div>
-          <div className="d-answer-dropdown"> 
-            <Dropdown>
-              <Dropdown.Toggle variant="light" id="dropdown-basic">
-                <i class="fa fa-sliders" aria-hidden="true"></i>
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item onClick={() => editHandler(props.ans)}>
-                  <i class="fa fa-pencil" aria-hidden="true"></i> Edit
-              </Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item onClick={() => deleteHandler(props.ans)}>
-                  <i class="fa fa-trash" aria-hidden="true"></i> Delete
-              </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </div>
-        </div>
-        <>
         <div className="d-answer-body">
           <div className="d-answer-body-answer">
             {isEditing ? (
@@ -88,13 +67,42 @@ const Answer = (props) => {
                 ></textarea>
                 <Button onClick={() => cnfrEditHandler(props.ans)}>
                   Confirm Edit
-                </Button>
+                  </Button>
               </>
             ) : (
-              props.ans.a_body
-            )}
+                props.ans.a_body
+              )}
           </div>
-        </div></>
+        </div>
+          <div className="d-answer-username d-ques-answers"> 
+            <Dropdown>
+              <Dropdown.Toggle variant="light" id="dropdown-basic">
+                <i className="fa fa-ellipsis-h" aria-hidden="true"></i>
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item onClick={() => editHandler(props.ques)}>
+                  <i className="fa fa-pencil" aria-hidden="true"></i> Edit
+                </Dropdown.Item>
+                <Dropdown.Divider />
+                <Dropdown.Item onClick={() => deleteHandler(props.ques)}>
+                  <i className="fa fa-trash" aria-hidden="true"></i> Delete
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+          <div className="d-ques-vote">
+            <div className="d-ques-vote-icons">
+              <div className="d-ques-vote-up">
+                <button><i className="fa fa-chevron-up" aria-hidden="true"></i></button>
+              </div>
+              <div className="d-ques-vote-down">
+                <button><i className="fa fa-chevron-down" aria-hidden="true"></i></button>
+              </div>
+            </div>
+            <div className="d-ques-owner">
+              <span>Answered By {props.ans.writer_name}</span>
+            </div>
+          </div>
       </div>
     </>
   );

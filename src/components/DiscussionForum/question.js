@@ -44,6 +44,10 @@ const Question = (props) => {
   console.log(props.ques, "hey");
   return (
     <>
+      <div className="d-ques-stats">
+        <div><i className="fa fa-caret-up" aria-hidden="true"></i></div>
+        <p>35</p>
+      </div>
       <div className="d-item-ques">
         {isEditing ? (
           <>
@@ -58,38 +62,47 @@ const Question = (props) => {
             </Button>
           </>
         ) : (
-          props.ques.q_body
-        )}
-      </div>
-      <div className="d-ques-owner">Asked by {props.ques.writer_name}</div>
-      <div className="d-ques-answers">
-        {props.ques && (
-          <>
-            <Dropdown>
-              <Dropdown.Toggle variant="light" id="dropdown-basic">
-                <i class="fa fa-sliders" aria-hidden="true"></i>
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item onClick={() => editHandler(props.ques)}>
-                  <i class="fa fa-pencil" aria-hidden="true"></i> Edit
-                </Dropdown.Item>
-                <Dropdown.Divider />
-                <Dropdown.Item onClick={() => deleteHandler(props.ques)}>
-                  <i class="fa fa-trash" aria-hidden="true"></i> Delete
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+          <div className="d-ans-link">
             <Link
-              to={{
-                pathname: `/discussion-forum/${props.ques._id}/answers`,
-                state: props.ques,
-              }}
-            >
-              <i className="fa fa-angle-double-right" aria-hidden="true"></i>
-              Answers
+                to={{
+                  pathname: `/discussion-forum/${props.ques._id}/answers`,
+                  state: props.ques,
+                }}>
+                {props.ques.q_body}
             </Link>
-          </>
+          </div>
         )}
+        <div className="d-ques-answers">
+          {props.ques && (
+            <>
+              <Dropdown>
+                <Dropdown.Toggle variant="light" id="dropdown-basic">
+                  <i className="fa fa-ellipsis-h" aria-hidden="true"></i>
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item onClick={() => editHandler(props.ques)}>
+                    <i className="fa fa-pencil" aria-hidden="true"></i> Edit
+                </Dropdown.Item>
+                  <Dropdown.Divider />
+                  <Dropdown.Item onClick={() => deleteHandler(props.ques)}>
+                    <i className="fa fa-trash" aria-hidden="true"></i> Delete
+                </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </>
+          )}
+        </div>
+      </div>
+      <div className="d-ques-vote">
+        <div className="d-ques-vote-icons">
+          <div className="d-ques-vote-up">
+            <button><i className="fa fa-chevron-up" aria-hidden="true"></i></button>
+          </div>
+          <div className="d-ques-vote-down">
+            <button><i className="fa fa-chevron-down" aria-hidden="true"></i></button>
+          </div>
+        </div>
+          <div className="d-ques-owner">Asked by {props.ques.writer_name}</div>
       </div>
     </>
   );

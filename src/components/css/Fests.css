@@ -7,6 +7,17 @@
     justify-content: center;
     align-items: center;
   }
+  .slideshow div{
+    width: 94%;
+    left: 3%;
+    right: 3%;
+    height: 40vh;
+  }
+  .fest-title-top {
+    margin: 0 auto 0 auto;
+    width: 94%;
+    height: 40vh;
+  }
 }
 @media (min-width: 800px) {
   .fest-container {
@@ -24,12 +35,100 @@
   .fest-item {
     padding: 30px;
   }
+  .slideshow div{
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    height: 65vh;
+  }
+  .fest-title-top{
+    height: 65vh;
+    width: 80%;
+  }
+}
+.fest-title-top{
+  background-color: #ffffff;
+  border-radius: 7px;
+  box-shadow: rgba(221, 230, 237, 0.4) 0px 16px 32px 0px;
+  padding: 0 10px 0 10px;
+  opacity: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slideshow {
+  position: relative;
+}
+
+.slideshow div {
+  border-radius: 7px;
+  box-shadow: rgba(221, 230, 237, 0.4) 0px 16px 32px 0px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto 0 auto;
+  position: absolute;
+  animation: imageAnimation 30s linear infinite;
+}
+
+.slideshow div:nth-child(1){
+  background-image: url(../img/technex1.jpg);
+}
+.slideshow div:nth-child(2){
+  background-image: url(../img/technex15.jpg);
+  animation-delay: 10s;
+}
+.slideshow div:nth-child(3){
+  background-image: url(../img//technex4.jpg);
+  animation-delay: 20s;
+}
+
+@keyframes imageAnimation{
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0;
+  }
+}
+
+.no-cssanimations .slideshow img{
+  opacity: 1;
+}
+.fest-title-top h4{
+  font-size: 250%;
+  border-bottom: 1px solid rgb(209, 209, 209);
+  padding: 5px;
+  margin: 10px;
+  font-family: "Poppins",
+  "Sans-serif";
 }
 .fest-item-top {
+  font-size: 90%;
+  margin-top: 10px;
   margin: 0 auto;
   text-align: center;
-  padding: 30px;
+  padding: 0px 30px 0px 30px;
   font-family: "Nunito", sans-serif;
+}
+.fest-items-container{
+  margin-top: 10px;
 }
 .fest-item {
   margin: 0 auto;
