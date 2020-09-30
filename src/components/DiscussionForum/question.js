@@ -96,10 +96,10 @@ const Question = (props) => {
       <div className="d-ques-vote">
         <div className="d-ques-vote-icons">
           <div className="d-ques-vote-up">
-            <button><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+            <button><i className="fa fa-chevron-up" aria-hidden="true"></i></button>
           </div>
           <div className="d-ques-vote-down">
-            <button><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+            <button><i className="fa fa-chevron-down" aria-hidden="true"></i></button>
           </div>
         </div>
           <div className="d-ques-owner">Asked by {props.ques.writer_name}</div>
