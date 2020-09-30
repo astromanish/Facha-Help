@@ -1,7 +1,7 @@
 import React from "react";
 
-const RegistrationGuide = () => {
+const PlacementStats = () => {
   return <>to be added after official registration details relesed</>;
 };
 
-export default RegistrationGuide;
+export default PlacementStats;

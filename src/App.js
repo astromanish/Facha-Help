@@ -29,6 +29,7 @@ import WebPresence from "./components/pages/web-presence";
 
 import Feedback from "./components/pages/feedback";
 import RegistrationGuide from "./components/pages/registration-guide";
+import PlacementStats from "./components/pages/placement-stats";
 
 const App = () => {
   return (
@@ -54,6 +55,7 @@ const App = () => {
               path="/registration-guide"
               component={RegistrationGuide}
             />
+            <Route excat path="/placement-stats" component={PlacementStats} />
             <QuestionProvider>
               <AnswerProvider>
                 <Route
