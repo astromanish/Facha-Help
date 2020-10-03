@@ -45,7 +45,9 @@ const Question = (props) => {
   return (
     <>
       <div className="d-ques-stats">
-        <div><i className="fa fa-caret-up" aria-hidden="true"></i></div>
+        <div>
+          <i className="fa fa-caret-up" aria-hidden="true"></i>
+        </div>
         <p>35</p>
       </div>
       <div className="d-item-ques">
@@ -64,11 +66,12 @@ const Question = (props) => {
         ) : (
           <div className="d-ans-link">
             <Link
-                to={{
-                  pathname: `/discussion-forum/${props.ques._id}/answers`,
-                  state: props.ques,
-                }}>
-                {props.ques.q_body}
+              to={{
+                pathname: `/discussion-forum/${props.ques._id}/answers`,
+                state: props.ques,
+              }}
+            >
+              {props.ques.q_body}
             </Link>
           </div>
         )}
@@ -82,11 +85,11 @@ const Question = (props) => {
                 <Dropdown.Menu>
                   <Dropdown.Item onClick={() => editHandler(props.ques)}>
                     <i className="fa fa-pencil" aria-hidden="true"></i> Edit
-                </Dropdown.Item>
+                  </Dropdown.Item>
                   <Dropdown.Divider />
                   <Dropdown.Item onClick={() => deleteHandler(props.ques)}>
                     <i className="fa fa-trash" aria-hidden="true"></i> Delete
-                </Dropdown.Item>
+                  </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </>
@@ -96,13 +99,17 @@ const Question = (props) => {
       <div className="d-ques-vote">
         <div className="d-ques-vote-icons">
           <div className="d-ques-vote-up">
-            <button><i className="fa fa-chevron-up" aria-hidden="true"></i></button>
+            <button>
+              <i className="fa fa-chevron-up" aria-hidden="true"></i>
+            </button>
           </div>
           <div className="d-ques-vote-down">
-            <button><i className="fa fa-chevron-down" aria-hidden="true"></i></button>
+            <button>
+              <i className="fa fa-chevron-down" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
-          <div className="d-ques-owner">Asked by {props.ques.writer_name}</div>
+        <div className="d-ques-owner">Asked by {props.ques.writer_name}</div>
       </div>
     </>
   );

@@ -17,7 +17,7 @@ import { AnswerProvider } from "./components/DiscussionForum/AnswerContext";
 import AboutUs from "./components/pages/about-us";
 
 import Fests from "./components/pages/fests";
-import KashiYatra from "./components/Fests/kashiYatra";
+import KashiYatra from "./components/Fests/kashiyatra";
 import Technex from "./components/Fests/technex";
 import FMCWeekend from "./components/Fests/fmc-weekend";
 import Spardha from "./components/Fests/spardha";
