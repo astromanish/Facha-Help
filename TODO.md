@@ -1,7 +1,7 @@
 ## Works to do 
 
 1. Adding time to both questions and answers.
-2. Connecting upvote and downvote to bacend.
+2. Connecting upvote and downvote to backend.
 3. Filling Terms and Conditions Component 
 - With some general terms and conditions of any sites and with some taking responsibilty of content provided etc.
 4. Filling Registration Guide Component
