@@ -6,7 +6,6 @@ const AnswerAll = (props) => {
   return (
     <>
       <div className="d-container">
-        <AddAnswer question={props.location.state} />
         <AnswerList question={props.location.state} />
       </div>
     </>

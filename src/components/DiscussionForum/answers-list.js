@@ -3,6 +3,8 @@ import axios from "axios";
 import Answer from "./answer";
 
 import { AnswerContext } from "./AnswerContext";
+import Question from './question';
+import AddAnswer from './add-answer';
 
 const AnswerList = (props) => {
   const [ansNo, setAnsNo] = useContext(AnswerContext);
@@ -26,22 +28,30 @@ const AnswerList = (props) => {
 
   return (
     <>
-      {answersList.length ? (
-        answersList
-          .slice(0)
-          .reverse()
-          .map((ans) => {
-            return (
-              <div className="d-item d-answers-all">
-                <Answer ans={ans} question={question}></Answer>{" "}
-              </div>
-            );
-          })
+    <div className="d-item">
+        <Question ques={question} />
+        {answersList.length ? (
+          <div className="d-answers-section">
+            {
+            answersList
+              .slice(0)
+              .reverse()
+              .map((ans) => {
+                return (
+                  <>
+                    <Answer ans={ans} question={question}></Answer>{" "}
+                  </>
+                );
+              })
+            }
+          </div>
       ) : (
-        <div className="d-item no-answer">
+        <div className="no-answer">
           <p>Be first one to add answer to this question</p>
         </div>
       )}
+        <AddAnswer question={question} />
+      </div>
     </>
   );
 };
