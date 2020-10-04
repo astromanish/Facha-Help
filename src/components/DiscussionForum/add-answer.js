@@ -3,7 +3,6 @@ import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 
 import { AnswerContext } from "./AnswerContext";
-import Question from './question';
 
 const AddAnswer = (props) => {
   const [ansNo, setAnsNo] = useContext(AnswerContext);
