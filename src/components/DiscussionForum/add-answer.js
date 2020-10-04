@@ -40,14 +40,7 @@ const AddAnswer = (props) => {
 
   return (
     <>
-      <div className="d-item d-item-ques-head">
-        <div className="d-item-ques-head-username">
-          Question by <span>{question.writer_name}</span>
-        </div>
-        <div className="d-item-ques-head-time">5 hours ago</div>
-        <div className="d-item-ques-head-ques">{question.q_body}</div>
-      </div>
-      <div className="d-item d-item-ask-model">
+      <div className="d-item-ask-model">
         <Form onSubmit={submitFun}>
           <Form.Group>
             <Form.Control

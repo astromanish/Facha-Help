@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import moment from 'moment';
 import axios from "axios";
 import { Button, Dropdown } from "react-bootstrap";
 
@@ -43,41 +44,22 @@ const Question = (props) => {
   };
   console.log(props.ques, "hey");
   return (
-    <>
-      <div className="d-ques-stats">
-        <div>
-          <i className="fa fa-caret-up" aria-hidden="true"></i>
-        </div>
-        <p>35</p>
-      </div>
-      <div className="d-item-ques">
-        {isEditing ? (
-          <>
-            <textarea
-              rows="7"
-              cols="40"
-              defaultValue={props.ques.q_body}
-              onChange={(e) => setEditAns(e.target.value)}
-            ></textarea>
-            <Button onClick={() => cnfrEditHandler(props.ques)}>
-              Confirm Edit
-            </Button>
-          </>
-        ) : (
-          <div className="d-ans-link">
-            <Link
-              to={{
-                pathname: `/discussion-forum/${props.ques._id}/answers`,
-                state: props.ques,
-              }}
-            >
-              {props.ques.q_body}
-            </Link>
+    <div className="d-ques-item" key={props.ques._id}>
+      <div className="d-ques">
+        <div className="d-user-details">
+          <div className="d-user-details-2">
+            <div className="d-user-details-icon">
+              <i className="fa fa-wpbeginner" aria-hidden="true"></i>
+            </div>
+            <div className="d-user-details-2-name">
+              {
+                props.ques.writer_name && <div>{props.ques.writer_name}</div> 
+              }
+              <div>{props.ques.date_created && moment(props.ques.date_created).fromNow()}</div>
+            </div>
           </div>
-        )}
-        <div className="d-ques-answers">
-          {props.ques && (
-            <>
+          <div className="d-edit-option">
+            {props.ques && (
               <Dropdown>
                 <Dropdown.Toggle variant="light" id="dropdown-basic">
                   <i className="fa fa-ellipsis-h" aria-hidden="true"></i>
@@ -92,26 +74,59 @@ const Question = (props) => {
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
+            )
+            }
+          </div>
+        </div>
+        <div className="d-ques-body">
+          {isEditing ? (
+            <>
+              <textarea
+                rows="7"
+                cols="40"
+                defaultValue={props.ques.q_body}
+                onChange={(e) => setEditAns(e.target.value)}
+              ></textarea>
+              <Button onClick={() => cnfrEditHandler(props.ques)}>
+                Confirm Edit
+            </Button>
             </>
-          )}
+          ) : (
+              <>
+                <span>{props.ques.q_body}</span>
+              </>
+            )}
+        </div>
+        <div className="d-ques-last-item">
+          <div className="d-ques-stats">
+            <div className="d-answers">
+              <span> <Link
+                to={{
+                  pathname: `/discussion-forum/${props.ques._id}/answers`,
+                  state: props.ques,
+                }}
+              >  14 Answers </Link></span>
+            </div>
+            <div className="d-upvotes">
+              <span>13 Upvotes </span>
+            </div>
+          </div>
+          <div className="d-ques-vote-icons">
+            <div className="d-ques-vote-up">
+              <button>
+                <i className="fa fa-chevron-up" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div className="d-ques-vote-down">
+              <button>
+                <i className="fa fa-chevron-down" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="d-ques-vote">
-        <div className="d-ques-vote-icons">
-          <div className="d-ques-vote-up">
-            <button>
-              <i className="fa fa-chevron-up" aria-hidden="true"></i>
-            </button>
-          </div>
-          <div className="d-ques-vote-down">
-            <button>
-              <i className="fa fa-chevron-down" aria-hidden="true"></i>
-            </button>
-          </div>
-        </div>
-        <div className="d-ques-owner">Asked by {props.ques.writer_name}</div>
-      </div>
-    </>
+    </div>
+      
   );
 };
 

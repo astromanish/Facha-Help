@@ -27,7 +27,7 @@ const QuestionList = () => {
             return (
               <>
                 <>
-                  <div className="d-item d-ques" key={ques._id}>
+                  <div className="d-item">
                     <Question ques={ques} />
                   </div>
                 </>
