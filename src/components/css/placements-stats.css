@@ -1,0 +1,73 @@
+@media(max-width: 600px){
+    .pm-year-stats{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+@media(min-width: 600px){
+    .pm-year-stats{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(min-width: 900px) {
+    .pm-year-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+.pm-year-stats{
+    justify-content: center;
+}
+
+.pm-branch{
+    position: relative;
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(221, 230, 237, 0.4) 0px 16px 32px 0px;
+    z-index: 1;
+    opacity: 1;
+    bottom: 0%;
+    transition: bottom  ease-in-out 0.3s;
+}
+.pm-branch:hover{
+    bottom: 2%;
+}
+.pm-branch-title:hover{
+    color: #550c72;
+}
+.pm-branch-title{
+    font-family: 'Nunito',
+    sans-serif;
+    font-size: 120%;
+    font-weight: 700;
+    padding: 10px 0px 10px 5px;
+    color: #353535;
+}
+.pm-branch p{
+    padding: 5px 0px 0px 7px;
+    margin-bottom: 5px;
+    font-size: 110%;
+    font-weight: 600;
+}
+.pm-branch ul{
+    color: #575757;
+    padding-left: 40px;
+}
+
+.pm-icons{
+    position: absolute;
+    bottom: -5%;
+    left: 74%;
+    font-size: 500%;
+    opacity: 0.3;
+}
+.pm-icon-spark{
+    color: rgb(250, 248, 121);
+}
+.pm-icon-debian{
+    opacity: 0.5;
+    color: #f8104a;
+}
