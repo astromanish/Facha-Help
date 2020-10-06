@@ -3,7 +3,18 @@ import React from "react";
 const DeptFests = () => {
   return (
     <>
-      <h4 className="heading-1">Departmental Fests</h4>
+      <div className="fest-title-top">
+        <h4>Departmental Fests</h4>
+        <div className="fest-item-top">
+          <p>
+            As the pages of the calendar turn over, different departments rise to
+            the occasion so as to relish the profundity and the versatility of
+            their sciences. These fests are the glaciers of skill where talents
+            are cradled before they get to contribute to the ocean of actual
+            application.
+            </p>
+        </div>
+      </div>
       <div className="fest-item">
         <p>
           The Indian Institute of Technology, Varanasi as we see today, is not
@@ -16,15 +27,6 @@ const DeptFests = () => {
           that shall define a future engineer; a celebration of knowledge,
           technology and the zeal that drives us forward and makes us who we are
           and will be.
-        </p>
-      </div>
-      <div className="fest-item">
-        <p>
-          As the pages of the calendar turn over, different departments rise to
-          the occasion so as to relish the profundity and the versatility of
-          their sciences. These fests are the glaciers of skill where talents
-          are cradled before they get to contribute to the ocean of actual
-          application.
         </p>
       </div>
       <div className="fest-item">

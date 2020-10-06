@@ -3,13 +3,15 @@ import React from "react";
 const Spardha = () => {
   return (
     <>
-      <h4 className="heading-1">Spardha</h4>
-      <div className="fest-item">
-        <p>
-          “When the race begins no one wishes to loose. This is the time, an
-          opportunity, a chance to show you skills. Crush the opponent and show
-          you are the best..!!”
-        </p>
+      <div className="fest-title-top">
+        <h4>Spardha</h4>
+        <div className="fest-item-top">
+          <p>
+            “When the race begins no one wishes to loose. This is the time, an
+            opportunity, a chance to show you skills. Crush the opponent and show
+            you are the best..!!”
+            </p>
+        </div>
       </div>
       <div className="fest-item">
         <p>

@@ -3,13 +3,20 @@ import React from "react";
 const FMCWeekend = () => {
   return (
     <>
-      <h4 className="heading-1">FMC Weekend</h4>
+      <div className="fest-title-top">
+        <h4>FMC Weekend</h4>
+        <div className="fest-item-top">
+          <p>
+            The joy and liveliness of
+            creating new things from scratch is the point of unification of all
+            the clubs of the Film and Media Council.
+            </p>
+        </div>
+      </div>
       <div className="fest-item">
         <p>
           <span>For My College </span>
-          Weekend is a celebration of creativity. The joy and liveliness of
-          creating new things from scratch is the point of unification of all
-          the clubs of the Film and Media Council. It is an opportunity for
+          Weekend is a celebration of creativity. It is an opportunity for
           everyone to try their hands on especially tailored events that brings
           out creativity from within you. In FMC Weekend ’15, there were
           competitions encompassing the areas of photography, cinematography,
