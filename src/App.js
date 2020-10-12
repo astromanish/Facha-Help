@@ -36,42 +36,42 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <div className="body-container">
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/about-us" component={AboutUs} />
-            <Route exact path="/fests" component={Fests} />
-            <Route exact path="/fests/kashiyatra" component={KashiYatra} />
-            <Route exact path="/fests/technex" component={Technex} />
-            <Route exact path="/fests/fmc-weekend" component={FMCWeekend} />
-            <Route exact path="/fests/spardha" component={Spardha} />
-            <Route exact path="/fests/dept-fest" component={DeptFests} />
-            <Route exact path="/gymkhana" component={Gymkhana} />
-            <Route exact path="/web-presence" component={WebPresence} />
             <Route exact path="/academics" component={Academics} />
-            <Route excat path="/feedback" component={Feedback} />
-            <Route
-              exact
-              path="/registration-guide"
-              component={RegistrationGuide}
-            />
-            <Route excat path="/placement-stats" component={PlacementStats} />
-            <QuestionProvider>
-              <AnswerProvider>
-                <Route
-                  exact
-                  path="/discussion-forum"
-                  component={DiscussionForum}
-                />
-                <Route
-                  exact
-                  path="/discussion-forum/:ques_id/answers"
-                  component={AnswerAll}
-                />
-              </AnswerProvider>
-            </QuestionProvider>
+            <div className="body-container">
+              <Route exact path="/about-us" component={AboutUs} />
+              <Route exact path="/fests" component={Fests} />
+              <Route exact path="/fests/kashiyatra" component={KashiYatra} />
+              <Route exact path="/fests/technex" component={Technex} />
+              <Route exact path="/fests/fmc-weekend" component={FMCWeekend} />
+              <Route exact path="/fests/spardha" component={Spardha} />
+              <Route exact path="/fests/dept-fest" component={DeptFests} />
+              <Route exact path="/gymkhana" component={Gymkhana} />
+              <Route exact path="/web-presence" component={WebPresence} />
+              <Route excat path="/feedback" component={Feedback} />
+              <Route
+                exact
+                path="/registration-guide"
+                component={RegistrationGuide}
+              />
+              <Route excat path="/placement-stats" component={PlacementStats} />
+              <QuestionProvider>
+                <AnswerProvider>
+                  <Route
+                    exact
+                    path="/discussion-forum"
+                    component={DiscussionForum}
+                  />
+                  <Route
+                    exact
+                    path="/discussion-forum/:ques_id/answers"
+                    component={AnswerAll}
+                  />
+                </AnswerProvider>
+              </QuestionProvider>
+            </div>
           </Switch>
-        </div>
         <Footer />
       </BrowserRouter>
     </div>

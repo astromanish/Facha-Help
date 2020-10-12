@@ -36,3 +36,8 @@ body {
 .highlighted-text {
   font-weight: 700;
 }
+
+/*Navbar*/
+.bg-dark{
+  background: #192024 !important;
+}
