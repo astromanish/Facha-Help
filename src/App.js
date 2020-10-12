@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import "./app.css";
+import "./App.css";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -18,9 +18,9 @@ import AboutUs from "./components/pages/about-us";
 
 import Fests from "./components/pages/fests";
 import KashiYatra from "./components/Fests/kashiyatra";
-import Technex from "./components/Fests/technex";
+import Technex from "./components/Fests/Technex";
 import FMCWeekend from "./components/Fests/fmc-weekend";
-import Spardha from "./components/Fests/spardha";
+import Spardha from "./components/Fests/Spardha";
 import DeptFests from "./components/Fests/dept-fests";
 
 import Gymkhana from "./components/pages/gymkhana";

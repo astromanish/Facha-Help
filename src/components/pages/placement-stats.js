@@ -1,11 +1,11 @@
 import React from "react";
 import '../css/placements-stats.css';
 import { GrDebian } from 'react-icons/gr';
-import { GiChemicalBolt} from 'react-icons/gi';
+import { GiChemicalBolt } from 'react-icons/gi';
 
 const PlacementStats = () => {
-  
-  return(
+
+  return (
     <>
       <div className="placement-container">
         <div className="pm-all-year">
@@ -79,12 +79,12 @@ const PlacementStats = () => {
                 <div className="pm-branch-stats">
                   <p>B.Tech.</p>
                   <ul>
-                    <li>Averge - 35 LPA</li>
+                    <li>Average - 35 LPA</li>
                     <li>Highest Package - 1.5 Crore</li>
                   </ul>
                   <p>IDD</p>
                   <ul>
-                    <li>Averge - 26 LPA</li>
+                    <li>Average - 26 LPA</li>
                     <li>Highest Package - 41 LPA</li>
                   </ul>
                 </div>
@@ -99,12 +99,12 @@ const PlacementStats = () => {
                 <div className="pm-branch-stats">
                   <p>B.Tech.</p>
                   <ul>
-                    <li>Averge - 20 LPA</li>
+                    <li>Average - 20 LPA</li>
                     <li>Highest Package - 42 LPA</li>
                   </ul>
                   <p>IDD</p>
                   <ul>
-                    <li>Averge - 23 LPA</li>
+                    <li>Average - 23 LPA</li>
                     <li>Highest Package - 41 LPA</li>
                   </ul>
                 </div>
@@ -222,7 +222,7 @@ const PlacementStats = () => {
                   <span>Mathematics and Computing</span>
                 </div>
                 <div className="pm-branch-stats">
-                  <p>B.Tech.</p>
+                  <p>IDD</p>
                   <ul>
                     <li>Average - 30 LPA</li>
                     <li>Highest Package - 1 Crore</li>

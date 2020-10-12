@@ -13,6 +13,7 @@ const QuestionList = () => {
       url: "http://localhost:8000/questions",
     })
       .then((res) => {
+        console.log(res);
         setQuestionsList(res.data);
       })
       .catch((err) => console.error(err));
@@ -35,10 +36,10 @@ const QuestionList = () => {
             );
           })
       ) : (
-        <div className="d-item no-question">
-          <p>Be first one to ask question here</p>
-        </div>
-      )}
+          <div className="d-item no-question">
+            <p>Be first one to ask question here</p>
+          </div>
+        )}
     </>
   );
 };
