@@ -1,3 +1,22 @@
+/*Most of the styling is done using home-container as both have same style*/
 .grade-table {
   text-align: center;
+  color: white;
+}
+.academics-container-2{
+  background: #192024 !important;
+  color: #c5c7c8 !important;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px 50px 50px;
+}
+.academics-container-2 .home-heading {
+  font-size: 140%;
+  color: white;
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+}
+.academics-container-2 .home-heading .heading-1{
+  color: #c5c7c8;
+  padding-bottom: 5px;
 }
