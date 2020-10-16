@@ -16,7 +16,9 @@ const AboutUs = () => {
           <div className="about-details">
             <div className="about-name">
               <span>Manish Singh</span>
-              <hr />
+              <br/>
+              <span>IIT BHU, MnC Part II</span>
+               <hr />
             </div>
             <div className="about-links">
               <div>
@@ -51,7 +53,9 @@ const AboutUs = () => {
           <div className="about-details">
             <div className="about-name">
               <span>Adarsh Tripathi</span>
-              <hr />
+              <br/>
+              <span>IIIT Allahabad, ECE Part II</span>
+              <hr/>
             </div>
             <div className="about-links">
               <div>
