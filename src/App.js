@@ -31,47 +31,52 @@ import Feedback from "./components/pages/feedback";
 import RegistrationGuide from "./components/pages/registration-guide";
 import PlacementStats from "./components/pages/placement-stats";
 
+import ExploreVns from "./components/pages/explore-vns";
+import TnC from './components/pages/TnC';
+
 const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
         <Header />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/academics" component={Academics} />
-            <div className="body-container">
-              <Route exact path="/about-us" component={AboutUs} />
-              <Route exact path="/fests" component={Fests} />
-              <Route exact path="/fests/kashiyatra" component={KashiYatra} />
-              <Route exact path="/fests/technex" component={Technex} />
-              <Route exact path="/fests/fmc-weekend" component={FMCWeekend} />
-              <Route exact path="/fests/spardha" component={Spardha} />
-              <Route exact path="/fests/dept-fest" component={DeptFests} />
-              <Route exact path="/gymkhana" component={Gymkhana} />
-              <Route exact path="/web-presence" component={WebPresence} />
-              <Route excat path="/feedback" component={Feedback} />
-              <Route
-                exact
-                path="/registration-guide"
-                component={RegistrationGuide}
-              />
-              <Route excat path="/placement-stats" component={PlacementStats} />
-              <QuestionProvider>
-                <AnswerProvider>
-                  <Route
-                    exact
-                    path="/discussion-forum"
-                    component={DiscussionForum}
-                  />
-                  <Route
-                    exact
-                    path="/discussion-forum/:ques_id/answers"
-                    component={AnswerAll}
-                  />
-                </AnswerProvider>
-              </QuestionProvider>
-            </div>
-          </Switch>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/academics" component={Academics} />
+          <div className="body-container">
+            <Route exact path="/about-us" component={AboutUs} />
+            <Route exact path="/fests" component={Fests} />
+            <Route exact path="/fests/kashiyatra" component={KashiYatra} />
+            <Route exact path="/fests/technex" component={Technex} />
+            <Route exact path="/fests/fmc-weekend" component={FMCWeekend} />
+            <Route exact path="/fests/spardha" component={Spardha} />
+            <Route exact path="/fests/dept-fest" component={DeptFests} />
+            <Route exact path="/gymkhana" component={Gymkhana} />
+            <Route exact path="/web-presence" component={WebPresence} />
+            <Route excat path="/feedback" component={Feedback} />
+            <Route excat path="/explore-vns" component={ExploreVns} />
+            <Route excat path="/tnc" component={TnC} />
+            <Route
+              exact
+              path="/registration-guide"
+              component={RegistrationGuide}
+            />
+            <Route excat path="/placement-stats" component={PlacementStats} />
+            <QuestionProvider>
+              <AnswerProvider>
+                <Route
+                  exact
+                  path="/discussion-forum"
+                  component={DiscussionForum}
+                />
+                <Route
+                  exact
+                  path="/discussion-forum/:ques_id/answers"
+                  component={AnswerAll}
+                />
+              </AnswerProvider>
+            </QuestionProvider>
+          </div>
+        </Switch>
         <Footer />
       </BrowserRouter>
     </div>
