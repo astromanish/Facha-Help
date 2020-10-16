@@ -4,20 +4,21 @@ import '../css/home.css';
 
 import bhu from '../img/bhu.jpeg';
 
+import fest from '../img/home/fest.jpg';
+import academics from '../img/home/academics.jpg';
+import gymkhana from '../img/home/gymkhana.jpg';
+import varanasi from '../img/home/explore-vns.jpg';
+import registration from '../img/home/registration.jpg';
+import discussion from '../img/home/discussion-forum.png';
+
 const Homepage = () => {
   return(
     <>
-      <div className="home-container">
-        <div className="home-container-0">
-          <div className="home-item-image">
-            <img src={bhu} alt="bhu"/>
-          </div>
-          <div className="home-item-image-heading">
-            WELCOME TO IIT BHU
-          </div>
+        <div className="home_main-image-container">
+          <img src={bhu} alt="bhu"/>
+          <h1>WELCOME TO IIT BHU</h1>
         </div>
         <div className="light-container">
-          <div className="item">
             <h1 className="heading">
               What this site all about
             </h1>
@@ -26,8 +27,6 @@ const Homepage = () => {
                festivals organized every year, gymkhana system of college which contains various clubs, gallery of photos, placement stats, exploration guide for BHU or 
                Varanasi in general and some miscellanous guide.
             </p>
-          </div>
-          <div className="item">
             <h1 className="heading">
               History of Institute
             </h1>
@@ -39,18 +38,69 @@ const Homepage = () => {
                In 1968 three engineering colleges merged to form the Institute of Technology (IT) BHU. In 2012 IT (BHU) had been 
                converted to IIT (BHU).
             </p>
-          </div>
         </div>
         <div className="dark-container">
-          <div className="image_item">
-            <div className="image_item-body">
-              <h1 className="light-heading">Registration Guide</h1>
-              <p className="image_item-content"></p>
+          <div className="site_item">
+            <div className="site_item-body">
+              <h1 className="heading">Registration Guide</h1>
+              <p className="site_item-content">the Benaras Enginnering College (BENCO) in 1919, the College of Minning and Metllurgy
+               (MINMET) in 1923 and the College of Technology (TECHNO) in 1932, as the constituent units of Banaras Hindu University.
+               In 1968 three engineering colleges merged to form the Institute of Technology (IT) BHU. In 2012 IT (BHU) had been 
+               converted to IIT (BHU).</p>
             </div>
-            <img className="image_item-image"/>
+            <img className="site_item-image" src={registration}/>
+          </div>
+          <div className="site_item item-inverse">
+            <div className="site_item-body">
+              <h1 className="heading">Discussion Forum</h1>
+              <p className="site_item-content">the Benaras Enginnering College (BENCO) in 1919, the College of Minning and Metllurgy
+               (MINMET) in 1923 and the College of Technology (TECHNO) in 1932, as the constituent units of Banaras Hindu University.
+               In 1968 three engineering colleges merged to form the Institute of Technology (IT) BHU. In 2012 IT (BHU) had been 
+               converted to IIT (BHU).</p>
+            </div>
+            <img className="site_item-image" src={discussion}/>
+          </div>
+          <div className="site_item">
+            <div className="site_item-body">
+              <h1 className="heading">Academics</h1>
+              <p className="site_item-content">the Benaras Enginnering College (BENCO) in 1919, the College of Minning and Metllurgy
+               (MINMET) in 1923 and the College of Technology (TECHNO) in 1932, as the constituent units of Banaras Hindu University.
+               In 1968 three engineering colleges merged to form the Institute of Technology (IT) BHU. In 2012 IT (BHU) had been 
+               converted to IIT (BHU).</p>
+            </div>
+            <img className="site_item-image" src={academics}/>
+          </div>
+          <div className="site_item item-inverse">
+            <div className="site_item-body">
+              <h1 className="heading">Festivals</h1>
+              <p className="site_item-content">the Benaras Enginnering College (BENCO) in 1919, the College of Minning and Metllurgy
+               (MINMET) in 1923 and the College of Technology (TECHNO) in 1932, as the constituent units of Banaras Hindu University.
+               In 1968 three engineering colleges merged to form the Institute of Technology (IT) BHU. In 2012 IT (BHU) had been 
+               converted to IIT (BHU).</p>
+            </div>
+            <img className="site_item-image" src={fest}/>
+          </div>
+          <div className="site_item">
+            <div className="site_item-body">
+              <h1 className="heading">Student Gymkhana</h1>
+              <p className="site_item-content" >the Benaras Enginnering College (BENCO) in 1919, the College of Minning and Metllurgy
+               (MINMET) in 1923 and the College of Technology (TECHNO) in 1932, as the constituent units of Banaras Hindu University.
+               In 1968 three engineering colleges merged to form the Institute of Technology (IT) BHU. In 2012 IT (BHU) had been 
+               converted to IIT (BHU).</p>
+            </div>
+            <img className="site_item-image" src={gymkhana}/>
+          </div>
+          <div className="site_item item-inverse">
+            <div className="site_item-body">
+              <h1 className="heading">Explore Varanasi</h1>
+              <p className="site_item-content">the Benaras Enginnering College (BENCO) in 1919, the College of Minning and Metllurgy
+               (MINMET) in 1923 and the College of Technology (TECHNO) in 1932, as the constituent units of Banaras Hindu University.
+               In 1968 three engineering colleges merged to form the Institute of Technology (IT) BHU. In 2012 IT (BHU) had been 
+               converted to IIT (BHU).</p>
+            </div>
+            <img className="site_item-image" src={varanasi}/>
           </div>
         </div>
-      </div>
     </>
   )
 };

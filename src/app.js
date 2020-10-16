@@ -42,15 +42,13 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/academics" component={Academics} />
+          <div className="body-container-full">
+              <Route exact path="/" component={Home} />
+              <Route exact path="/academics" component={Academics} />
+              <Route exact path="/gymkhana" component={Gymkhana} />
+          </div>
           <div className="body-container">
-            <Route
-              exact
-              path="/registration-guide"
-              component={RegistrationGuide}
-            />
-            <Route exact path="/gymkhana" component={Gymkhana} />
+            <Route exact path="/registration-guide" component={RegistrationGuide}/>
 
             <Route exact path="/fests" component={Fests} />
             <Route exact path="/fests/kashiyatra" component={KashiYatra} />
@@ -72,16 +70,8 @@ const App = () => {
           
             <QuestionProvider>
               <AnswerProvider>
-                <Route
-                  exact
-                  path="/discussion-forum"
-                  component={DiscussionForum}
-                />
-                <Route
-                  exact
-                  path="/discussion-forum/:ques_id/answers"
-                  component={AnswerAll}
-                />
+                <Route exact path="/discussion-forum" component={DiscussionForum} />
+                <Route exact path="/discussion-forum/:ques_id/answers" component={AnswerAll}/>
               </AnswerProvider>
             </QuestionProvider>
           </div>

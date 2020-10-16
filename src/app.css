@@ -14,9 +14,14 @@ body {
 }
 
 .body-container {
-  max-width: 1100px;
+  max-width: 1000px;
   width: 90%;
   margin: 20px auto;
+}
+
+.body-container-full {
+  max-width: 1800px;
+  width: 100%;
 }
 
 .light-container {
@@ -24,7 +29,7 @@ body {
   flex-direction: column;
   background: #ffffff;
   color: #1a1f22;
-  padding: 30px 50px 50px 50px;
+  padding: 30px 20px;
 }
 
 .dark-container {
@@ -32,7 +37,7 @@ body {
   flex-direction: column;
   background: #192024;
   color: #c5c7c8;
-  padding: 30px 50px 50px 50px;
+  padding: 30px 20px;
 }
 
 .page-heading {
@@ -47,9 +52,7 @@ body {
   font-size: 1.8rem;
   font-family: "Poppins", "Sans-serif";
   margin: 0.8em auto;
-  border-bottom: 1px solid #dadada;
-  width: 350px;
-  color: #192024;
+  color: inherit;
 }
 
 .sub-heading {
