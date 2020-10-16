@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../css/Fests.css";
+
+import "../css/fests.css";
 
 const Fests = () => {
   return (

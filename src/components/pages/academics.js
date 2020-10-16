@@ -191,8 +191,8 @@ const Academics = () => {
         <div className="home-container-1 academics-container-2">
           <div className="home-item">
             <div className="home-heading">
-              <h4 className="heading-1">Branch Change Rules</h4>
-              <h4 className="heading-2">Change of Discipline</h4>
+              <h4 className="heading">Branch Change Rules</h4>
+              <h4 className="sub-heading">Change of Discipline</h4>
             </div>
             <div className="home-content">
               <p>
@@ -208,7 +208,7 @@ const Academics = () => {
               </p>
             </div>
             <div className="home-heading">
-              <h4 className="heading-2">Change of Programme</h4>
+              <h4 className="sub-heading">Change of Programme</h4>
             </div>
             <div className="home-content">
               <p>

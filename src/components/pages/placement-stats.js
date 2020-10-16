@@ -1,7 +1,9 @@
 import React from "react";
-import '../css/placements-stats.css';
 import { GrDebian } from 'react-icons/gr';
 import { GiChemicalBolt } from 'react-icons/gi';
+
+import '../css/placements-stats.css';
+
 
 const PlacementStats = () => {
 

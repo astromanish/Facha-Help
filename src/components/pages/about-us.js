@@ -1,7 +1,10 @@
 import React from "react";
+
+import "./../css/about-us.css";
+
 import Manish from "./../img/manish.jpg";
 import Adarsh from "./../img/adarsh.jpg";
-import "./../css/about-us.css";
+
 
 const AboutUs = () => {
   return (

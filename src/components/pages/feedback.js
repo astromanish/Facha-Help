@@ -1,7 +1,9 @@
 import React from 'react';
-import {Form,Button,Row,Col} from 'react-bootstrap';
-import '../css/feedback.css';
 import {Link} from 'react-router-dom';
+import {Form,Button,Row,Col} from 'react-bootstrap';
+
+import '../css/feedback.css';
+
 
 
 const Feedback = () => {

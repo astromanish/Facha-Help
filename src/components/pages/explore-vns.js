@@ -8,10 +8,10 @@ import Kachori from './../img/explore-vns/must-eat/kachori-sabji.webp';
 const ExploreVns = () => {
     return (
         <>
-            <h4 className="heading-1">Must Eat</h4>
+            <h4 className="heading">Must Eat</h4>
             <div className="must-eat">
                 <div className="must-eat-item">
-                    <h4 className="heading-2 kachori">Kachori Sabzi</h4>
+                    <h4 className="sub-heading kachori">Kachori Sabzi</h4>
                     <img src={Kachori} />
                     <p className="must-eat-content kachori">Kachori sabji makes for the most popular Kaleva (breakfast) option in Benaras.
                          There are two different types of kachoris- badi and choti kachori.
@@ -20,32 +20,32 @@ const ExploreVns = () => {
                            kachoris are savoured with garam masala wali aloo ki sazi and desi ghee jalebi. What a way to start your day!</p>
                 </div>
                 <div className="must-eat-item">
-                    <h4 className="heading-2"></h4>
+                    <h4 className="sub-heading"></h4>
                     <img src="" />
                     <p></p>
                 </div>
                 <div className="must-eat-item">
-                    <h4 className="heading-2"></h4>
+                    <h4 className="sub-heading"></h4>
                     <img src="" />
                     <p></p>
                 </div>
                 <div className="must-eat-item">
-                    <h4 className="heading-2"></h4>
+                    <h4 className="sub-heading"></h4>
                     <img src="" />
                     <p></p>
                 </div>
                 <div className="must-eat-item">
-                    <h4 className="heading-2"></h4>
+                    <h4 className="sub-heading"></h4>
                     <img src="" />
                     <p></p>
                 </div>
                 <div className="must-eat-item">
-                    <h4 className="heading-2"></h4>
+                    <h4 className="sub-heading"></h4>
                     <img src="" />
                     <p></p>
                 </div>
                 <div className="must-eat-item">
-                    <h4 className="heading-2"></h4>
+                    <h4 className="sub-heading"></h4>
                     <img src="" />
                     <p></p>
                 </div>

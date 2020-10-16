@@ -27,11 +27,11 @@
   .fest-item {
     padding: 30px;
   }
-  .fest-sub-item{
+  .fest-sub-item {
     margin: 20px 20px 20px 20px;
   }
 }
-.fest-title-top{
+.fest-title-top {
   margin: 30px;
   box-shadow: rgba(221, 230, 237, 0.4) 0px 16px 32px 0px;
   border-radius: 10px;
@@ -43,13 +43,12 @@
   justify-content: center;
 }
 
-.fest-title-top h4{
+.fest-title-top h4 {
   font-size: 250%;
   border-bottom: 1px solid rgb(209, 209, 209);
   padding: 5px;
   margin: 10px;
-  font-family: "Poppins",
-  "Sans-serif";
+  font-family: "Poppins", "Sans-serif";
 }
 .fest-item-top {
   font-size: 90%;
@@ -59,15 +58,15 @@
   padding: 0px 30px 0px 30px;
   font-family: "Nunito", sans-serif;
 }
-.fest-items-container{
+.fest-items-container {
   margin: 20px 10px 20px 10px;
 }
-.fest-sub-icon{
+.fest-sub-icon {
   align-self: center;
   font-size: 280%;
   color: rgb(228, 61, 153);
 }
-.fest-sub-item{
+.fest-sub-item {
   position: relative;
   box-shadow: rgba(221, 230, 237, 0.4) 0px 16px 32px 0px;
   border-radius: 10px;
@@ -96,8 +95,7 @@
 }
 
 .fest-subtitle {
-  font-family: 'Nunito',
-  sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 800;
   font-size: 130%;
   padding: 15px 15px 5px 15px;

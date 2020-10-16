@@ -3,7 +3,7 @@
   text-align: center;
   color: white;
 }
-.academics-container-2{
+.academics-container-2 {
   background: #192024 !important;
   color: #c5c7c8 !important;
   display: flex;
@@ -16,7 +16,7 @@
   text-align: center;
   padding: 20px 20px 20px 20px;
 }
-.academics-container-2 .home-heading .heading-1{
+.academics-container-2 .home-heading .heading {
   color: #c5c7c8;
   padding-bottom: 5px;
 }
