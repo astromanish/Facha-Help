@@ -8,7 +8,7 @@ import Adarsh from "./../img/adarsh.jpg";
 
 const AboutUs = () => {
   return (
-    <>
+    <div className="body-container">
       <div className="about-header">
         <div className="about-each">
           <div className="about-image">
@@ -85,7 +85,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

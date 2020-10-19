@@ -9,16 +9,15 @@ import '../css/feedback.css';
 const Feedback = () => {
 
     return(
-        <div className="feedback-container">
-            <div className="feedback">
+        <div className="body-container">
                 <Form className="feedback-form">
                     <div className="feedback-inputs">
                         <Form.Group as={Row} controlId="formPlaintextName">
                             <Form.Label column sm="2">
                                 Name
-                                </Form.Label>
+                            </Form.Label>
                             <Col sm="10">
-                                <Form.Control type="text" placeholder="Your name.." required={true}/>
+                                <Form.Control type="text" placeholder="Enter your name" required={true}/>
                             </Col>
                         </Form.Group>
                         <Form.Group as={Row} controlId='formPlaintextName' >
@@ -36,10 +35,9 @@ const Feedback = () => {
                         </Button>
                     </div>
                     <div className="bug">
-                        <div>Any Bug? <Link> Report it</Link></div>
+                        <div>Any Bug/Feature Request? <Link> Report it</Link></div>
                     </div>
                 </Form>
-            </div>
         </div>
     );
 };

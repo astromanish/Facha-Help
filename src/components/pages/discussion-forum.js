@@ -7,10 +7,10 @@ import QuestionList from "../DiscussionForum/questions-list";
 
 const DiscussionForum = () => {
   return (
-    <>
+    <div className="body-container">
       <AskQuestion />
       <QuestionList />
-    </>
+    </div>
   );
 };
 

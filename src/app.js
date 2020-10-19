@@ -42,39 +42,35 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Switch>
-          <div className="body-container-full">
               <Route exact path="/" component={Home} />
+              <Route exact path="/registration-guide" component={RegistrationGuide}/>
               <Route exact path="/academics" component={Academics} />
               <Route exact path="/gymkhana" component={Gymkhana} />
-          </div>
-          <div className="body-container">
-            <Route exact path="/registration-guide" component={RegistrationGuide}/>
+              
+              <Route exact path="/fests" component={Fests} />
+              <Route exact path="/fests/kashiyatra" component={KashiYatra} />
+              <Route exact path="/fests/technex" component={Technex} />
+              <Route exact path="/fests/fmc-weekend" component={FMCWeekend} />
+              <Route exact path="/fests/spardha" component={Spardha} />
+              <Route exact path="/fests/dept-fest" component={DeptFests} />
 
-            <Route exact path="/fests" component={Fests} />
-            <Route exact path="/fests/kashiyatra" component={KashiYatra} />
-            <Route exact path="/fests/technex" component={Technex} />
-            <Route exact path="/fests/fmc-weekend" component={FMCWeekend} />
-            <Route exact path="/fests/spardha" component={Spardha} />
-            <Route exact path="/fests/dept-fest" component={DeptFests} />
+              <Route excat path="/gallery" component={Gallery} />
+              <Route excat path="/placement-stats" component={PlacementStats} />
+              <Route exact path="/web-presence" component={WebPresence} />
+              <Route exact path="/miscellanous-guide" component={MiscellanousGuide} />
 
-            <Route excat path="/gallery" component={Gallery} />
-            <Route excat path="/placement-stats" component={PlacementStats} />
-            <Route exact path="/web-presence" component={WebPresence} />
-            <Route exact path="/miscellanous-guide" component={MiscellanousGuide} />
+              <Route excat path="/explore-vns" component={ExploreVns} />
 
-            <Route excat path="/explore-vns" component={ExploreVns} />
-
-            <Route exact path="/about-us" component={AboutUs} />
-            <Route excat path="/feedback" component={Feedback} />
-            <Route excat path="/tnc" component={TnC} />
+              <Route exact path="/about-us" component={AboutUs} />
+              <Route excat path="/feedback" component={Feedback} />
+              <Route excat path="/tnc" component={TnC} />
           
-            <QuestionProvider>
-              <AnswerProvider>
-                <Route exact path="/discussion-forum" component={DiscussionForum} />
-                <Route exact path="/discussion-forum/:ques_id/answers" component={AnswerAll}/>
-              </AnswerProvider>
-            </QuestionProvider>
-          </div>
+              <QuestionProvider>
+                <AnswerProvider>
+                  <Route exact path="/discussion-forum" component={DiscussionForum} />
+                  <Route exact path="/discussion-forum/:ques_id/answers" component={AnswerAll}/>
+                </AnswerProvider>
+              </QuestionProvider>
         </Switch>
         <Footer />
       </BrowserRouter>

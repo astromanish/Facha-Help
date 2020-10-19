@@ -3,7 +3,7 @@ import "./../css/web-presence.css";
 
 const WebPresence = () => {
   return (
-    <>
+    <div className="body-container">
       <h4 className="heading">Websites</h4>
       <ul className="web-list">
         <li className="web-item">
@@ -76,7 +76,7 @@ const WebPresence = () => {
           <a href="#" className="web-link"></a>
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 

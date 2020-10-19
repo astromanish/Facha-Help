@@ -4,7 +4,7 @@ import './../css/miscellanous-guide.css';
 
 const MiscellanousGuide = () => {
     return(
-        <>Miscellanous Guide</>
+        <div className="body-container">Miscellanous Guide</div>
     )
 }
 

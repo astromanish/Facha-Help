@@ -5,7 +5,7 @@ import "../css/fests.css";
 
 const Fests = () => {
   return (
-    <>
+    <div className="body-container">
       <div className="fests-links">
         <ul>
           <li>
@@ -25,7 +25,7 @@ const Fests = () => {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 

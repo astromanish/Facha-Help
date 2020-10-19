@@ -8,7 +8,7 @@ import '../css/placements-stats.css';
 const PlacementStats = () => {
 
   return (
-    <>
+    <div className="body-container">
       <div className="placement-container">
         <div className="pm-all-year">
           <div className="pm-year">
@@ -235,7 +235,7 @@ const PlacementStats = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 
 };

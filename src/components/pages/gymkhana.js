@@ -4,7 +4,7 @@ import "./../css/gymkhana.css";
 
 const Clubs = () => {
   return (
-    <>
+    <div className="body-container-full">
       <h4 className="page-heading">Student Gymkhana</h4>
       <p>
         The Students’ Gymkhana manages all student activities at the campus
@@ -213,7 +213,7 @@ const Clubs = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -5,7 +5,7 @@ import "./../css/academics.css";
 
 const Academics = () => {
   return (
-    <>
+    <div className="body-container-full">
         <div className="home-container-1">
           <div className="home-item">
             <div className="home-heading">
@@ -236,7 +236,7 @@ const Academics = () => {
             </div>
           </div>
         </div>
-    </>
+    </div>
   );
 };
 

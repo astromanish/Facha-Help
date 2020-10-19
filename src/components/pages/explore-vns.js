@@ -7,7 +7,7 @@ import Kachori from './../img/explore-vns/must-eat/kachori-sabji.webp';
 
 const ExploreVns = () => {
     return (
-        <>
+        <div className="body-container">
             <h4 className="heading">Must Eat</h4>
             <div className="must-eat">
                 <div className="must-eat-item">
@@ -50,7 +50,7 @@ const ExploreVns = () => {
                     <p></p>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
